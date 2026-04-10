@@ -6,6 +6,7 @@
     --gris-fonce: #666;
     --gris-tres-clair: #f8f8f8;
     --gris-clair: #eee;
+    
 }
 
 *{
@@ -224,5 +225,699 @@ footer a {
 footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
+}
+
+/* =========================================
+   STYLE DU MAIN (PAGE CONTACT)
+   ========================================= */
+
+   .contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Style du titre H1 demandé */
+.main-title {
+    color: var(--violet-doux);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.main-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: var(--violet-doux);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* Conteneur de la carte */
+.contact-modern {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* Partie Gauche : Infos & Liens WhatsApp/Telegram */
+.contact-visual {
+    flex: 1;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.contact-visual h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.direct-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 2rem 0;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+
+
+.social-btn:hover {
+    background: white;
+    color: var(--violet-doux);
+    transform: translateX(10px);
+}
+
+.location {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Partie Droite : Formulaire */
+.contact-form-side {
+    flex: 1.2;
+    padding: 3.5rem;
+    background: white;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--gris-clair);
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--gris-fonce);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Animation des labels */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -20px;
+    font-size: 0.85rem;
+    color: var(--violet-doux);
+    font-weight: bold;
+}
+
+.input-box input:focus {
+    border-bottom: 2px solid var(--violet-doux);
+}
+
+.submit-modern {
+    width: 100%;
+    background: var(--violet-doux);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+.submit-modern:hover {
+    background: var(--violet-fonce);
+    transform: translateY(-2px);
+}
+
+/* Responsivité tablettes et mobiles */
+@media (max-width: 850px) {
+    .contact-card {
+        flex-direction: column;
+    }
+    .main-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Section Projets */
+.projets-section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+section h2 {
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--violet-doux);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Grille de cartes */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+
+/* Style de la Carte */
+.projet-card {
+    background: var(--blanc);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+}
+
+.projet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projet-content {
+    padding: 20px;
+    flex-grow: 1;
+
+}
+
+.projet-content h3 {
+    color: var(--violet-doux);
+    margin-bottom: 15px;
+}
+
+.projet-content p {
+    font-size: 0.95rem;
+    color: var(--gris-fonce);
+    margin-bottom: 20px;
+}
+
+/* Badges Tags */
+.tags {
+    margin-bottom: 20px;
+}
+
+.tags span {
+    background: #eeedff;
+    color: var(--violet-doux);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+/* Liens du bas */
+.projet-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid var(--gris-clair);
+}
+
+.projet-links a, .status {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.projet-links a:hover {
+    color: var(--violet-doux);
+}
+
+/* --- SECTION PASSIONS PRÉCISE (image_11.png) --- */
+
+.passions-section {
+    padding: 80px 5%;
+    background-color: var(--gris-tres-clair); /* Fond global gris clair */
+}
+
+/* Titre principal 'Mes Passions' centré */
+.main-title {
+    text-align: center;
+    color: var(--violet-doux);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block; /* Pour que le pseudo-
+
+élément se centre bien */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Conteneur des cartes */
+.passions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espace entre les cartes */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Style de base d'une carte de passion */
+
+.passion-card {
+    background-color: #ffffff; /* Fond blanc pur pour la carte */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 40px;
+    display: flex;
+    align-items: center; /* Alignement vertical centré */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ombre douce et large */
+    position: relative; /* Nécessaire pour le positionnement absolu du numéro bg */
+    overflow: hidden; /* Pour que le numéro ne dépasse pas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol (optionnel, mais moderne) */
+.passion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- LE NUMÉRO EN ARRIÈRE-PLAN --- */
+
+.bg-number {
+    position: absolute;
+    top: -20px; /* Positionnement précis en haut */
+    right: 30px; /* Positionnement précis à droite */
+    font-size: 8rem; /* Très grande taille */
+    font-weight: 900; /* Très gras */
+    color: var(--violet-doux);
+    opacity: 0.15; /* Très transparent (15%) */
+    z-index: 1; /* Derrière le contenu principal */
+    font-family: Arial, sans-serif; /* Police épaisse pour le numéro */
+}
+
+/* --- COLONNE GAUCHE (Visuel + Titre) --- */
+.passion-visual {
+    flex: 0 0 280px; /* Largeur fixe pour la colonne gauche */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2; /* Devant le numéro bg */
+}
+
+.passion-visual img {
+
+    width: 120px; /* Taille de l'illustration */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.passion-visual h3 {
+    font-size: 1.1rem;
+    color: var(--violet-doux);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+/* --- SÉPARATEUR VERTICAL --- */
+.vertical-divider {
+    width: 1px;
+    height: 120px; /* Hauteur précise */
+    background-color: #e0e0e0; /* Gris clair */
+    margin: 0 40px; /* Espace autour du trait */
+    z-index: 2;
+}
+
+/* --- COLONNE DROITE (Texte + Tags) --- */
+.passion-content {
+
+    flex: 1; /* Prend tout l'espace restant */
+    z-index: 2;
+}
+
+.passion-content p {
+    font-size: 1.2rem;
+    color: var(--gris-fonce);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 500px; /* Pour forcer le retour à la ligne comme sur l'image */
+}
+
+/* --- TAGS (Badges) MINIMALISTES --- */
+.tags-passions {
+    display: flex;
+    gap: 12px;
+}
+
+.tags-passions span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--violet-doux);
+    background-color: #f2f1ff; /* Violet extrêmement clair */
+
+    padding: 8px 18px;
+    border-radius: 20px; /* Très arrondi */
+    letter-spacing: 0.5px;
+}
+
+/* --- CAS SPÉCIAL: CARTE 2 (Cerveau en arrière-plan) --- */
+/* Tu peux utiliser une icône SVG ou une image pour le cerveau */
+.card-ai::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 200px;
+    height: 200px;
+    /* Remplace par le chemin vers ton icône de cerveau grise/transparente */
+    background-image: url('img/brain-icon.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Encore plus transparent */
+    z-index: 1;
+}
+@media (max-width: 850px) {
+    .passion-card {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .passion-visual {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .vertical-divider {
+        width: 80%;
+        height: 1px;
+        margin: 20px auto;
+    }
+
+    .passion-content p {
+        margin-bottom: 20px;
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .tags-passions {
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .bg-number {
+        font-size: 6rem;
+        top: 10px;
+        right: 10px;
+    }
+} /* Cette accolade est celle qui manquait et qui causait le rouge ! */
+
+/* --- SECTION DIVERTISSEMENT --- */
+.card-series h3 {
+    text-align: center;
+    color: var(--violet-doux);
+}
+.divertissement-container {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin-top: 50px;
+    align-items: start;
+}
+
+/* CARTE DE BASE */
+.ent-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.ent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.15);
+}
+
+/* --- FOCUS SÉRIES (AGRANDI) --- */
+/* --- NOUVEAU STYLE GALERIE SÉRIES --- */
+
+.card-series {
+    grid-column: span 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.serie-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.serie-item {
+    flex: 1; /* Les 3 colonnes font la même taille */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.serie-item:hover {
+    transform: translateY(-10px);
+}
+
+.poster-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2/3; /* Garde le format affiche de film */
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge collé sur l'image */
+.serie-badge {
+
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(108, 99, 255, 0.9);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+}
+
+.serie-info strong {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    line-height: 1.2;
+}
+
+/* Ajustement pour le responsive (Mobile) */
+@media (max-width: 600px) {
+    .serie-gallery {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .serie-item {
+        width: 80%;
+    }
+}
+
+
+/* --- JEUX VIDÉO --- */
+.card-games {
+    background-image: url("code.jpg");
+    grid-row: span 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 450px;
+}
+
+.card-games .ent-icon {
+    font-size: 5rem;
+    color: var(--violet-doux);
+    margin-bottom: 25px;
+}
+
+.tags-ent {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tags-ent span {
+    background: var(--violet-doux);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 12px;
+}
+
+/* --- MUSIQUE (VIOLET) --- */
+.card-music {
+    background: var(--violet-doux);
+    color: white;
+}
+
+.music-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+.progress-bar {
+    height: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    margin: 10px 0 20px;
+}
+
+.progress {
+    height: 100%;
+    background: #ffaa00;
+    border-radius: 3px;
+}
+
+/* --- BOUTONS ACTIONS --- */
+.ent-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-ent {
+    background: white;
+    border: 1px solid #eee;
+    padding: 15px;
+
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.btn-ent:hover {
+    background: var(--violet-doux);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 950px) {
+    .ent-grid { grid-template-columns: 1fr; }
+    .card-series { grid-column: span 1; transform: scale(1); }
+    .card-games { grid-row: span 1; min-height: auto; }
 }
 

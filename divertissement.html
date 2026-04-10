@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Acceuil</a></li>
-                <li><a href="projets.html" class="active">Projet</a></li>
+                <li><a href="projets.html">Projet</a></li>
                 <li><a href="passions.html">passions</a></li>
                 <li><a href="divertissement.html"class="active">Divertissement</a></li>
                 <li><a href="contact.html" >Contact</a></li>
@@ -27,23 +27,97 @@
         </nav>
     </header>
     <main>
-        <h1>voici mon divertissement</h1>
+        <section class="divertissement-container">
+            <h1 class="main-title">Mes Divertissements</h1>
+            
+            <div class="ent-grid">
+                <article class="ent-card card-series">
+                    <h3>Les séries qui m'inspirent</h3>
+                    <div class="serie-gallery">
+                        <div class="serie-item">
+                            <div class="poster-container">
+                                <img src="hero.jpg" alt="weak hero">
+                                <span class="serie-badge">Drama</span>
+                            </div>
+                            <div class="serie-info">
+                                <strong>weak hero</strong>
+                            </div>
+                        </div>
+                
+                        <div class="serie-item">
+                            <div class="poster-container">
+                                <img src="peacky.jpg" alt="peacky blinders">
+                                <span class="serie-badge">Sci-Fi</span>
+                            </div>
+                            <div class="serie-info">
+                                <strong>peacky blinders</strong>
+                            </div>
+                        </div>
+                
+                        <div class="serie-item">
+                
+                            <div class="poster-container">
+                                <img src="naruto.jpg" alt="Naruto">
+                                <span class="serie-badge">manga</span>
+                            </div>
+                            <div class="serie-info">
+                                <strong>Naruto</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="ent-card card-games">
+                    <div class="ent-icon">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3>Top Jeux Vidéo</h3>
+                    <p>Passionné d'aventure et de stratégie.</p>
+                    <div class="tags-ent">
+                        <span>Elden Ring</span>
+                        <span>Civ VI</span>
+                    </div>
+    
+                    <div class="platforms">
+                        <i class="fa-brands fa-playstation"></i>
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                </article>
+    
+                <article class="ent-card card-music">
+                    <div class="music-header">
+                        <i class="fa-solid fa-headphones"></i>
+                        <h3>Bande-son</h3>
+                    </div>
+                    <div class="player-sim">
+                        <div class="track">
+                            <div class="track-info">Daft Punk — Veridis Quo</div>
+                            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="track">
+                            <div class="track-info">Hans Zimmer — Time</div>
+                            <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+                        </div>
+                    </div>
+    
+                </article>
+    
+                <div class="ent-actions">
+                    <button class="btn-ent"><i class="fa-solid fa-heart"></i> Recommandations</button>
+                    <button class="btn-ent"><i class="fa-solid fa-star"></i> Mes Critiques</button>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <footer>
-     <DIV>
-        <p>&copy; 2026 Mulengu Kayembe Andy. Tous droits réservés.</p>
-     </DIV>
-     <TABle>
-            <TR>
-               <TD>
-                 <a href=""><i class="fa-brands fa-github"></i></a>
-                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                 <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                </TR>
-               </TD>
-            </TR>
-     </TABle>
+            <p>&copy; 2026 Mulengu Kayembe Andy. Tous droits réservés.</p>
+           <div>
+               <a href=""><i class="fa-brands fa-github"></i></a>
+               <a href=""><i class="fa-brands fa-linkedin"></i></a>
+               <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+           </div>
     </footer>
-</body>
-
-</html>
+   </body>
+   
+   </html>
